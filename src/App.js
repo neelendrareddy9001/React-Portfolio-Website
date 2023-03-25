@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Container } from 'react-bootstrap';
 import Home from './pages/Home';
@@ -8,12 +8,14 @@ import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Header from './compnents/Header';
 
+
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Router>
+      
+        <>
           <Header/>
+          <Container>
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/projects" element={<Projects/>}/>
@@ -21,8 +23,8 @@ function App() {
             <Route path="/about" element={<About/>}/>
             <Route path="/contact" element={<Contact/>}/>
           </Routes>
-        </Router>
-      </Container>
+         </Container>
+      </>
     </div>
   );
 }
