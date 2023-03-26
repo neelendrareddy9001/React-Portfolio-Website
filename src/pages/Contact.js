@@ -1,10 +1,17 @@
 import React from 'react';
+import { motion  } from 'framer-motion';
 import { Button, Col, Form, FormControl, FormGroup, FormLabel, ListGroup, ListGroupItem, Row } from 'react-bootstrap';
 
 const Contact = () => {
     const handleSubmit = () => {};
   return (
-    <div className='contact'>
+    <motion.div 
+        className='contact'
+        initial={{scaleY : 0}}
+        animate = {{scaleY : 1}}
+        exit ={{scaleY : 0}}
+        transition = {{duration : 0.2}}
+    >
         <h2>Contact</h2>
         <Row>
             <Col>
@@ -61,7 +68,7 @@ const Contact = () => {
                 </div>
             </Col>
         </Row>
-    </div>
+    </motion.div>
   )
 }
 
